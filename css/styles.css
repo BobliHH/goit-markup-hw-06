@@ -297,7 +297,7 @@ body {
 .what-we-do-overlay-container {
   overflow: hidden;
   position: relative;
-  display: flex;
+  /* display: flex; */
 }
 
 .what-we-do-overlay {
@@ -308,9 +308,11 @@ body {
   color: rgba(255, 255, 255, 1);
   position: absolute;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+  padding: 27px;
 }
 
 .title {
@@ -626,7 +628,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 250ms linear, transform 250ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .inner-modal {
@@ -637,11 +645,16 @@ body {
   /* justify-content: right;
   align-items: center; */
   position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden .inner-modal{
+  transform: scale(0.1);
 }
 
 .close-modal {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  /* background: #ffffff; */
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -655,11 +668,7 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
+  padding: 0;
 }
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0);
-}
+
