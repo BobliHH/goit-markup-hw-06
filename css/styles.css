@@ -638,10 +638,11 @@ body {
 }
 
 .inner-modal {
+  content: "";
   width: 528px;
   height: 581px;
   background-color: #fff;
-  display: flex;
+  display: block;
   /* justify-content: right;
   align-items: center; */
   position: relative;
@@ -669,6 +670,31 @@ body {
   top: 8px;
   right: 8px;
   padding: 0;
+}
+
+.tickbox{
+  color: rgba(117, 117, 117, 1);
+}
+
+
+.terms-blue{
+  color: rgba(33, 150, 243, 1);
+}
+
+.request-form{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.title_container {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.17;
+  padding-bottom: 15px;
 }
 
 

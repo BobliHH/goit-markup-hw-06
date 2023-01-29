@@ -24,23 +24,31 @@
           <img src="./images/close-button.svg" alt="close button" />
         </button>
         <form class="request-form">
-          <div class="form-group" role="group" aria-labelledby="contact-details-head">
-            <p id="contact-details-head">Leave your information and we'll call you back</p>
-            <label>
-              Name<br>
-              <input type="text" name="username" />
-            </label><br>
-            <label>
-              Telephone<br>
-              <input type="phone" name="phone" />
-            </label><br>
-            <label>
-              Email<br>
-              <input type="email" name="email" />
+          <div class="title_container">
+            <h2>Leave your information and we'll call you back</h2>
+          </div>  
+            <label class="positioning">
+              Name
+              <input type="text" name="username" autofocus placeholder="name" required />
             </label>
-          </div>
-
+            <label class="positioning">
+              Telephone
+              <input type="tel" name="phone_number" required placeholder="07123456789" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required placeholder="example@domain.com" />
+            </label>
+            <label>
+              Comments
+              <textarea name="comments" rows="5" placeholder="Enter the text"></textarea>
+            </label>
+            <label class="tickbox">
+              <input type="checkbox" name="consent" value="terms">
+              <a>I agree with the letter and accept the <a class="terms-blue" href="#">Terms and Conditions</a></a>
+            </label>
         </form>
+        <button type="submit">Send</button>
       </div>
     </div>
     <header class="page-header">
