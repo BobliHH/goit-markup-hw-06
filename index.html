@@ -19,38 +19,53 @@
   </head>
   <body>
     <div class="modal is-hidden" data-modal>
-      <div class="inner-modal">
-        <button class="close-modal" data-modal-close>
+      <div class="inner-modal" >
+        <button type="button" class="close-modal" data-modal-close>
           <img src="./images/close-button.svg" alt="close button" />
-        </button>
-        <form class="request-form">
-          <div class="title_container">
-            <h2>Leave your information and we'll call you back</h2>
-          </div>  
-            <label class="positioning">
-              Name
-              <input type="text" name="username" autofocus placeholder="name" required />
-            </label>
-            <label class="positioning">
-              Telephone
-              <input type="tel" name="phone_number" required placeholder="07123456789" />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required placeholder="example@domain.com" />
-            </label>
-            <label>
+        </button> 
+        <div class="container-form">
+        <h2 class="terms">Leave your information and we'll call you back</h2>
+        <form class="modal-forms">
+          <label class="form-line">
+            <svg class="icon-forms">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
+            Name
+            <input type="text" class="form-input" name="username">
+          </label>
+          <label class="form-line">
+            <svg class="icon-forms">
+            <use href="./images/icons.svg#icon-Telephone2"></use>
+          </svg>
+            Telephone
+            <input type="tel" class="form-input" name="tel">
+          </label>
+          <label class="form-line">
+            <svg class="icon-forms">
+              <use href="./images/icons.svg#icon-Email2"></use>
+            </svg>
+            E-mail
+            <input type="email" class="form-input" name="email">
+          </label>
+            <label class="form-line">
               Comments
-              <textarea name="comments" rows="5" placeholder="Enter the text"></textarea>
-            </label>
-            <label class="tickbox">
-              <input type="checkbox" name="consent" value="terms">
-              <a>I agree with the letter and accept the <a class="terms-blue" href="#">Terms and Conditions</a></a>
-            </label>
+              <textarea class="form-input form-input-text" name="Comments" placeholder="Enter the text"></textarea>
+          </label>
+          <label class="label-checkbox">
+            <input class="form-input-checked" type="checkbox" name="Terms"/>
+            <span class="chechbox-replice">
+              <svg class="svg-checked" >
+                <use href="./images/icons.svg#icon-checked"></use>
+              </svg>
+            </span>
+            <span class="ckeck-text"></span>
+            I agree with the letter and accept the <span class="terms-condition"> Terms and Conditions</span>
+          </label >
+          <button class="modal-button-submit" type="submit">Submit</button>
         </form>
-        <button type="submit">Send</button>
       </div>
-    </div>
+      </div> 
+      </div>
     <header class="page-header">
       <div class="container">
         <a class="logo header-logo link" href="index.html"
@@ -497,6 +512,20 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-container">
+        <form class="footer-form">
+          <h2 class="subcribe-title">Subscribe to the newsletter</h2>
+          <div class="footer-email">
+            <label class="email-subscribe">
+              <input class="footer-input" type="email" name="email" required placeholder="E-mail" />
+            </label>
+          </div>
+        </form>
+          <button class="subscribe-button" type="submit"><span class="footer-subscribe">Subscribe</span>
+          <svg class="send-icon">
+            <use href="./images/icons.svg#icon-icon-send"></use>
+          </svg></button>
+      </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
